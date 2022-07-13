@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:text="Nome"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="45dp" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:text="Usuário"
+                android:textSize="20sp" />
+
+            <EditText android:id="@+id/usuario" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:text="Senha"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/senha"
+                android:layout_width="6dp"
+                android:password="true" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UF:"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/opcoes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/uf" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sexo"
+                android:textSize="20sp" />
+
+
+            <RadioGroup
+                android:id="@+id/selsexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Masculino"
+                    android:textSize="19sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Feminino"
+                    android:textSize="19sp" />
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:text="Receber notificações"
+                android:textSize="15sp" />
+
+            <ToggleButton
+                android:id="@+id/botaotoggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="toggle"
+                android:textOn="On"
+                android:textOff="Off" />
+        </TableRow>
+
+
+        <TableRow android:gravity="right">
+
+            <Button
+                android:id="@+id/cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cadastrar"
+                android:text="Cadastrar" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
